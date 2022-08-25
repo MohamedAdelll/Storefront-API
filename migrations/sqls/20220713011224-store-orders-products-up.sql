@@ -1,0 +1,2 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE TABLE order_products (order_idF uuid NOT NULL REFERENCES store_orders(order_id),product_idF uuid NOT NULL REFERENCES store_products(product_id),product_quantity INTEGER NOT NULL);
